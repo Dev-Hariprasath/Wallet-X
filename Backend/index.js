@@ -1,34 +1,18 @@
-require('dotenv').config();
-
 const express = require('express');
-const cors = require('cors');
-
-const JWT_SECRET = process.env.JWT_SECRET
-const rootRouter = require('./routes/index.js');
+require('dotenv').config();
+const sequelize = require('./config/db'); // Correct import
+const accountRouter = require('./routes/account');
 
 const app = express();
-
-const PORT = process.env.PORT || 3500;
-
-app.use(cors());
 app.use(express.json());
 
-app.use('/api/v1', rootRouter);
+app.use('/account', accountRouter);
 
-app.use((req, res) => {
-    const err = new Error('File not found');
-    err.status = 404;
-    throw err;
-});
-
-app.use((err, req, res, next) => {  
-    res.status(err.status || 500).json({
-        message: err.message || "Oops! Something went wrong"
+sequelize.sync().then(() => {
+    console.log('✅ Database synchronized');
+    app.listen(process.env.PORT || 3000, () => {
+        console.log(`✅ Server running on port ${process.env.PORT || 3000}`);
     });
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is running on PORT ${PORT}.`);
-    console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-    console.log('API base URL: /api/v1');
+}).catch(err => {
+    console.error('❌ Failed to synchronize database:', err);
 });
