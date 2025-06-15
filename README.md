@@ -1,6 +1,6 @@
 # WalletX 👝💸
 
-Welcome to the Wallet X project! This sleek wallet application is your go-to solution for managing finances effortlessly. Built on the powerful MERN (MongoDB, Express.js, React.js, Node.js) stack, it offers a seamless user experience and robust functionality.
+Welcome to the Wallet X project! This sleek wallet application is your go-to solution for managing finances effortlessly. Built on the powerful PERN (PostgreSQL, Express.js, React.js, Node.js) stack, it offers a seamless user experience and robust functionality.
 
 ![image](https://github.com/Rohit-Singh-Rawat/Wallet-App/assets/117940279/aee401d8-e708-4a15-afc8-67500697a857)
 
