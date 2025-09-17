@@ -13,7 +13,7 @@
 **WalletX** is a full-stack wallet application designed for efficient personal finance management.  
 It combines a **React.js** frontend with a **Spring Boot** backend and **PostgreSQL** database, providing a **secure, scalable, and user-friendly experience**.
 
-![WalletX Screenshot](https://github.com/Dev-Hariprasath/Wallet-X/assets/Hari.png)
+![WalletX Screenshot](assets/Hari.png)
 
 ---
 
@@ -200,3 +200,4 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 ---
 
 Take control of your finances with **WalletX**! 🚀💰
+
