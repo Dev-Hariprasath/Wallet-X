@@ -1,122 +1,202 @@
 # WalletX 👝💸
 
-Welcome to the Wallet X project! This sleek wallet application is your go-to solution for managing finances effortlessly. Built on the powerful PERN (PostgreSQL, Express.js, React.js, Node.js) stack, it offers a seamless user experience and robust functionality.
+[![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react)](https://reactjs.org/) 
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3.2-brightgreen?logo=spring)](https://spring.io/projects/spring-boot) 
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql)](https://www.postgresql.org/) 
+[![Vite](https://img.shields.io/badge/Vite-4.4.9-yellow?logo=vite)](https://vitejs.dev/) 
+[![JWT](https://img.shields.io/badge/JWT-Secure-orange?logo=jsonwebtokens)](https://jwt.io/)
 
-![image](https://github.com/Rohit-Singh-Rawat/Wallet-App/assets/117940279/aee401d8-e708-4a15-afc8-67500697a857)
+---
 
+## Overview
 
-## Features ✨
+**WalletX** is a full-stack wallet application designed for efficient personal finance management.  
+It combines a **React.js** frontend with a **Spring Boot** backend and **PostgreSQL** database, providing a **secure, scalable, and user-friendly experience**.
 
-* **CRUD Operations:** Manage transactions with ease - Create, Read, Update, and Delete functionalities at your fingertips.
-* **Money Transfer:** Transfer dummy funds seamlessly to other users.
-* **Transaction History:** Keep track of all financial activities conveniently.
-* **User Search:** Quickly find users within the app for seamless interactions.
-* **Settings:** Personalize your experience with customizable settings.
+![WalletX Screenshot](https://github.com/Dev-Hariprasath/Wallet-X/assets/Hari.png)
 
-## Tech Stack 🛠️
+---
 
-Wallet X leverages the following cutting-edge technologies:
+## Features
 
+WalletX comes with a **professional and secure feature set**:
 
-* MongoDB: 📊 A flexible, document-based open-source database.
-* Express.js: 🚀 A robust web application framework for Node.js.
-* React.js: ⚛️ A powerful JavaScript library for building dynamic user interfaces.
-* Node.js: 🟢 A versatile JavaScript runtime built on Chrome's V8 engine.
+---
 
-Additional technologies and tools:
+### [![CRUD](https://img.shields.io/badge/CRUD-Manage-green?logo=postman)](https://www.postman.com/)
+**CRUD Transactions**  
+* Create, Read, Update, and Delete transactions with ease.  
+* Keep finances organized and accurate.  
+* Example: Add a new expense, edit details, or remove old transactions.
 
-* JWT (JSON Web Tokens): 🔐 Ensures secure user authentication.
-* Vite: 🌀 A lightning-fast frontend build tool.
-* Vercel: 🌐 Top-notch frontend hosting.
-* Render: 🔄 Reliable backend hosting.
+---
+
+### [![Transfer](https://img.shields.io/badge/Transfer-Secure-blue?logo=paypal)](https://www.paypal.com/)
+**Money Transfer**  
+* Send funds to other users seamlessly.  
+* Mimics real-world wallet transfers safely.  
+* Example: Transfer money to a friend or another account.
+
+---
+
+### [![History](https://img.shields.io/badge/History-Track-orange?logo=ledger)](https://www.ledger.com/)
+**Transaction History**  
+* View a complete log of all transactions.  
+* Track income and spending patterns easily.  
+* Example: See daily, weekly, or monthly transactions at a glance.
+
+---
+
+### [![Search](https://img.shields.io/badge/Search-Fast-yellow?logo=algolia)](https://www.algolia.com/)
+**User Search**  
+* Quickly locate other users in the app.  
+* Facilitates smoother transfers and interactions.  
+* Example: Type a username to find a friend for sending funds.
+
+---
+
+### [![Settings](https://img.shields.io/badge/Settings-Personalize-purple?logo=slack)](https://slack.com/)
+**Settings & Customization**  
+* Personalize themes, notifications, and preferences.  
+* Keep the interface and profile tailored to your needs.  
+* Example: Update theme or profile information.
+
+---
+
+### [![JWT](https://img.shields.io/badge/JWT-Secure-red?logo=jsonwebtokens)](https://jwt.io/)
+**Secure Authentication**  
+* JWT-based authentication ensures safe user sessions.  
+* Protects sensitive data like transactions and account information.
+
+---
+
+### [![React](https://img.shields.io/badge/React-Responsive-blue?logo=react)](https://reactjs.org/)
+**Responsive Frontend**  
+* React.js provides a fast, interactive, and mobile-friendly UI.  
+* Real-time updates enhance user experience with smooth navigation.
+
+---
 
 ## Getting Started 🚀
 
-Follow these simple steps to set up Wallet X on your local machine:
-
 ### Prerequisites 📋
 
-* Node.js and npm installed on your machine.
-* MongoDB installed and running locally or accessible remotely.
-* Git
+* Java 17+ and Maven  
+* Node.js and npm  
+* PostgreSQL installed locally or remotely  
+* Git  
 
-### Step 1: Installation 🛠️
+---
 
-1. **Clone the repository:**
+### Step 1: Clone the Repository
 
-```sh
-git clone https://github.com/Rohit-Singh-Rawat/Wallet-App.git
-```
+```bash
+git clone https://github.com/Dev-Hariprasath/Wallet-X.git
+cd Wallet-X
+````
 
-**Backend Setup**
+---
 
-Navigate to the backend directory:
+### Step 2: Backend Setup (Spring Boot)
 
-```sh
+1. Navigate to the backend folder:
+
+```bash
 cd backend
 ```
 
-Install dependencies:
+2. Update the `application.properties` or `application.yml` with your PostgreSQL credentials:
 
-```sh
-npm install
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/walletx
+spring.datasource.username=your_db_username
+spring.datasource.password=your_db_password
+spring.jpa.hibernate.ddl-auto=update
+jwt.secret=your_jwt_secret
+server.port=8080
 ```
 
-Create a `.env` file and add the following:
+3. Build and run the backend:
 
-```
-DATABASE_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=3000
-```
-
-Start the backend server:
-
-```sh
-node index.js
+```bash
+mvn clean install
+mvn spring-boot:run
 ```
 
-**Frontend Setup**
+---
 
-Navigate to the frontend directory:
+### Step 3: Frontend Setup (React.js)
 
-```sh
+1. Navigate to the frontend folder:
+
+```bash
 cd ../frontend
 ```
 
-Install dependencies:
+2. Install dependencies:
 
-```sh
+```bash
 npm install
 ```
 
-Create a `.env` file and add:
+3. Create a `.env` file with the API base URL:
 
+```env
+VITE_API_BASE_URL=http://localhost:8080
 ```
-VITE_API_BASE_URL=http://localhost:3000
-```
 
-Start the frontend development server:
+4. Start the frontend server:
 
-```sh
+```bash
 npm run dev
 ```
 
-### Step 2: Accessing the App 🖥️
+---
 
-With both backend and frontend running, your app should open automatically in your default web browser. If not, navigate to http://localhost:3000.
+### Step 4: Access the Application
 
-### Step 3: Making Changes 🛠️
+Open your browser and navigate to:
 
-As you make changes, the development server will automatically rebuild the affected parts and refresh the browser.
+```
+http://localhost:5173
+```
 
-**Note:**
+---
 
-- Ensure your MongoDB instance is running.
-- The `.env` file should contain all necessary environment variables.
+### Step 5: Development Notes
 
-## Further Help ℹ️
+* The frontend supports hot-reloading for rapid development.
+* Ensure PostgreSQL is running before starting the backend.
+* Update `.env` and `application.properties` with the correct credentials and secrets.
 
-For more information on development practices and setting up your environment, refer to the documentation of the tools and technologies used.
+---
 
-Get started with Wallet X today and take control of your finances like never before! 🚀💰
+## Contributing 🤝
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-name`)
+3. Make your changes
+4. Commit (`git commit -m 'Add feature'`)
+5. Push to branch (`git push origin feature-name`)
+6. Open a Pull Request
+
+---
+
+## Resources & Documentation 📚
+
+* [React.js Documentation](https://reactjs.org/docs/getting-started.html)
+* [Spring Boot Documentation](https://spring.io/projects/spring-boot)
+* [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+* [JWT Introduction](https://jwt.io/introduction/)
+
+---
+
+## License 📝
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
+Take control of your finances with **WalletX**! 🚀💰
