@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import Heading from "../components/Heading";
 import InputBox from "../components/InputBox";
 import SubHeading from "../components/SubHeading";
-import axios from "../axios";
+import axios from "src/axios";
 import { useNavigate } from "react-router-dom";
 import bgImg from "../assets/imgs/bgImg.jpg";
 import username from "../assets/icons/username.svg";

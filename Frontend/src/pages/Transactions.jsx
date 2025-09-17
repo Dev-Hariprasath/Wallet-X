@@ -4,7 +4,7 @@ import { SideBar } from "../components/SideBar";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { transactionAtom } from "../store/atom/TransactionInfo";
 import TransactionDiv from "../components/TransactionDiv";
-import axios from "../axios";
+import axios from "src/axios";
 import noTran from "../assets/imgs/no-transaction.png";
 import { SideBarOpen } from "../store/atom/sideBarAtom";
 import loading from "../assets/imgs/Loading Square.gif";

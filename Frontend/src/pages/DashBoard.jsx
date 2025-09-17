@@ -8,7 +8,7 @@ import TransactionBox from "../components/TransactionBox";
 import { useRecoilState } from "recoil";
 import { transactionAtom } from "../store/atom/TransactionInfo";
 import { useMemo } from "react";
-import axios from "../axios";
+import axios from "src/axios";
 import loading from "../assets/imgs/Loading Square.gif";
 
 const DashBoard = () => {

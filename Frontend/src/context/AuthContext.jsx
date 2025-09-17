@@ -1,5 +1,5 @@
 // AuthContext.js
-import axios from "../axios";
+import axios from "src/axios";
 import React, { createContext, useContext, useState, useEffect } from "react";
 const AuthContext = createContext();
 

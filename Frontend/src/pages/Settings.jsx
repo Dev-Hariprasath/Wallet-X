@@ -4,7 +4,7 @@ import Balance from "../components/Balance";
 import Users from "../components/Users";
 import History from "../components/History";
 import Header from "../components/Header";
-import axios from "../axios";
+import axios from "src/axios";
 import { useNavigate } from "react-router-dom";
 import { SideBarOpen } from "../store/atom/sideBarAtom";
 import { useSetRecoilState } from "recoil";
